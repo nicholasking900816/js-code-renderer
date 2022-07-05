@@ -1,6 +1,6 @@
 {
   "name": "js-code-renderer",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "美化javascript代码在浏览器上的展示",
   "main": "dist/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/nicholasking900816/js-code-renderer#readme",
   "dependencies": {
-    "js-ast-parser": "^1.0.1"
+    "js-ast-parser": "^1.0.3"
   },
   "devDependencies": {
     "typescript": "^4.7.4"

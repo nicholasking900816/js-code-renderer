@@ -2,49 +2,50 @@ import { Block } from "js-ast-parser/dist/Block";
 import { NodeCode } from "js-ast-parser/dist/constants";
 import { JavascriptAst } from "js-ast-parser/dist/JavascriptAst";
 import { AstNode } from "js-ast-parser/dist/lib/AstNode";
-import { ArrayLiteralExpression } from "js-ast-parser/dist/lib/Expression/ArrayLiteralExpression";
-import { AssignmentExpression } from "js-ast-parser/dist/lib/Expression/AssignmentExpression";
-import { BinaryExpression } from "js-ast-parser/dist/lib/Expression/BinaryExpression";
-import { CallExpression } from "js-ast-parser/dist/lib/Expression/CallExpression";
-import { FunctionExpression } from "js-ast-parser/dist/lib/Expression/FuntionExpression";
-import { IdentifierLiteralExpression } from "js-ast-parser/dist/lib/Expression/IdentifierLiteralExpression";
-import { MemberExpression } from "js-ast-parser/dist/lib/Expression/MemberExpression";
-import { NewExpressioin } from "js-ast-parser/dist/lib/Expression/NewExpressioin";
-import { NumberLiteralExpression } from "js-ast-parser/dist/lib/Expression/NumberLiteratalExpression";
-import { ObjectLiteralExpression } from "js-ast-parser/dist/lib/Expression/ObjectLiteralExpression";
-import { ParticularLiteralExpression } from "js-ast-parser/dist/lib/Expression/ParticularLiteralExpression";
-import { RegExpressioin } from "js-ast-parser/dist/lib/Expression/RegExpressioin";
-import { StringLiteralExpression } from "js-ast-parser/dist/lib/Expression/StringLiteralExpression";
-import { TemplateLiteralExppression } from "js-ast-parser/dist/lib/Expression/TemplateLiteralExppression";
-import { TernaryExpression } from "js-ast-parser/dist/lib/Expression/TernaryExpression";
-import { UnaryExpression } from "js-ast-parser/dist/lib/Expression/UnaryExpression";
-import { ClassDeclarationStatement } from "js-ast-parser/dist/lib/Statement/ClassDeclarationStatement";
-import { DoWhileStatement } from "js-ast-parser/dist/lib/Statement/DoWhileStatement";
-import { ExportDeclarationStatement } from "js-ast-parser/dist/lib/Statement/ExportDeclarationStatement";
-import { ForStatement } from "js-ast-parser/dist/lib/Statement/ForStatement";
-import { FunctionDeclarationStatement } from "js-ast-parser/dist/lib/Statement/FunctionDeclarationStatement";
-import { IfStatement } from "js-ast-parser/dist/lib/Statement/IfStatement";
-import { ImportStatement } from "js-ast-parser/dist/lib/Statement/ImportStatement";
-import { ReturnStatement } from "js-ast-parser/dist/lib/Statement/ReturnStatement";
-import { SwitchCaseStatement } from "js-ast-parser/dist/lib/Statement/SwitchCaseStatement";
-import { SwitchStatement } from "js-ast-parser/dist/lib/Statement/SwitchStatement";
-import { TryCathchStatement } from "js-ast-parser/dist/lib/Statement/TryCatchStatement";
-import { UnExpectStatement } from "js-ast-parser/dist/lib/Statement/UnExpectStatement";
-import { VariableDeclarationStatement } from "js-ast-parser/dist/lib/Statement/VariableDeclarationStatement";
-import { WhileStatement } from "js-ast-parser/dist/lib/Statement/WhileStatement";
-import { WithStatement } from "js-ast-parser/dist/lib/Statement/WithStatement";
+import { ArrayLiteralExpression } from "js-ast-parser/dist/lib/expression/ArrayLiteralExpression";
+import { AssignmentExpression } from "js-ast-parser/dist/lib/expression/AssignmentExpression";
+import { BinaryExpression } from "js-ast-parser/dist/lib/expression/BinaryExpression";
+import { CallExpression } from "js-ast-parser/dist/lib/expression/CallExpression";
+import { FunctionExpression } from "js-ast-parser/dist/lib/expression/FuntionExpression";
+import { IdentifierLiteralExpression } from "js-ast-parser/dist/lib/expression/IdentifierLiteralExpression";
+import { MemberExpression } from "js-ast-parser/dist/lib/expression/MemberExpression";
+import { NewExpressioin } from "js-ast-parser/dist/lib/expression/NewExpressioin";
+import { NumberLiteralExpression } from "js-ast-parser/dist/lib/expression/NumberLiteratalExpression";
+import { ObjectLiteralExpression } from "js-ast-parser/dist/lib/expression/ObjectLiteralExpression";
+import { ParticularLiteralExpression } from "js-ast-parser/dist/lib/expression/ParticularLiteralExpression";
+import { RegExpressioin } from "js-ast-parser/dist/lib/expression/RegExpressioin";
+import { StringLiteralExpression } from "js-ast-parser/dist/lib/expression/StringLiteralExpression";
+import { TemplateLiteralExppression } from "js-ast-parser/dist/lib/expression/TemplateLiteralExppression";
+import { TernaryExpression } from "js-ast-parser/dist/lib/expression/TernaryExpression";
+import { UnaryExpression } from "js-ast-parser/dist/lib/expression/UnaryExpression";
+import { ClassDeclarationStatement } from "js-ast-parser/dist/lib/statement/ClassDeclarationStatement";
+import { DoWhileStatement } from "js-ast-parser/dist/lib/statement/DoWhileStatement";
+import { ExportDeclarationStatement } from "js-ast-parser/dist/lib/statement/ExportDeclarationStatement";
+import { ForStatement } from "js-ast-parser/dist/lib/statement/ForStatement";
+import { FunctionDeclarationStatement } from "js-ast-parser/dist/lib/statement/FunctionDeclarationStatement";
+import { IfStatement } from "js-ast-parser/dist/lib/statement/IfStatement";
+import { ImportStatement } from "js-ast-parser/dist/lib/statement/ImportStatement";
+import { ReturnStatement } from "js-ast-parser/dist/lib/statement/ReturnStatement";
+import { SwitchCaseStatement } from "js-ast-parser/dist/lib/statement/SwitchCaseStatement";
+import { SwitchStatement } from "js-ast-parser/dist/lib/statement/SwitchStatement";
+import { TryCathchStatement } from "js-ast-parser/dist/lib/statement/TryCatchStatement";
+import { UnExpectStatement } from "js-ast-parser/dist/lib/statement/UnExpectStatement";
+import { VariableDeclarationStatement } from "js-ast-parser/dist/lib/statement/VariableDeclarationStatement";
+import { WhileStatement } from "js-ast-parser/dist/lib/statement/WhileStatement";
+import { WithStatement } from "js-ast-parser/dist/lib/statement/WithStatement";
 import { CodeRenderNode } from "./code-render-node";
 import { Color, RegPosEscape, RegPosQulifier, RegQulifier, RegSpecilCharEscape } from "./constance";
 import { LinkedListUtil } from "./linked-list.util";
 import { BoundaryNode } from "./boundary-node";
 import { Definition } from "js-ast-parser/dist/lib/scope-analyzer/Definition";
 import { DefinitionType } from "js-ast-parser/dist/lib/scope-analyzer/definitionType";
-import { TypeOfExpression } from "js-ast-parser/dist/lib/Expression/TypeOfExpression";
-import { ThrowStatement } from "js-ast-parser/dist/lib/Statement/ThrowStatement";
-import { BreakStatement } from "js-ast-parser/dist/lib/Statement/BreakStatement";
-import { ContinueStatement } from "js-ast-parser/dist/lib/Statement/ContinueStatement";
-import { VoidExpression } from "js-ast-parser/dist/lib/Expression/VoidExpression";
-import { BracketEnwrapedExpressioin } from "js-ast-parser/dist/lib/Expression/BracketEnwrapedExpressioin";
+import { TypeOfExpression } from "js-ast-parser/dist/lib/expression/TypeOfExpression";
+import { ThrowStatement } from "js-ast-parser/dist/lib/statement/ThrowStatement";
+import { BreakStatement } from "js-ast-parser/dist/lib/statement/BreakStatement";
+import { DebuggerStatement } from "js-ast-parser/dist/lib/statement/DebuggerStatement"
+import { ContinueStatement } from "js-ast-parser/dist/lib/statement/ContinueStatement";
+import { VoidExpression } from "js-ast-parser/dist/lib/expression/VoidExpression";
+import { BracketEnwrapedExpressioin } from "js-ast-parser/dist/lib/expression/BracketEnwrapedExpressioin";
 import { Scope } from "js-ast-parser/dist/lib/scope-analyzer/Scope";
 import { JavascriptAstParsser } from "js-ast-parser";
 
@@ -298,6 +299,9 @@ export class CodeRenderer {
                 case NodeCode.BreakStatement:
                     this.renderBreakStatement(node as BreakStatement);
                     break;
+                case NodeCode.DebuggerStatement:
+                    this.renderDebugger(node as DebuggerStatement);
+                    break;    
                 case NodeCode.BracketEnwrapedExpressioin:
                     this.renderBracketEnwraped(node as BracketEnwrapedExpressioin);
                     break;    
@@ -311,6 +315,12 @@ export class CodeRenderer {
             if(separate) separate();
         })
     }
+
+    private renderDebugger(statement: DebuggerStatement) {
+        this.advanceTo(statement.loc.start);
+        this.advanceTo(statement.loc.end, 'debugger', Color.declarationKeyWord);
+    }
+    
 
     private renderTypeOfExpression(expression: TypeOfExpression) {
         this.advanceTo(expression.loc.start as number);
