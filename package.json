@@ -1,0 +1,32 @@
+{
+  "name": "js-code-renderer",
+  "version": "1.0.2",
+  "description": "美化javascript代码在浏览器上的展示",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "publish": "tsc && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholasking900816/js-code-renderer.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "beautify-js-code"
+  ],
+  "author": "nicholasking0816",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicholasking900816/js-code-renderer/issues"
+  },
+  "homepage": "https://github.com/nicholasking900816/js-code-renderer#readme",
+  "dependencies": {
+    "js-ast-parser": "^1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
